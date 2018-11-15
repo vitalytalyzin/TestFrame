@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0;"/>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      var windowHeight = window.innerHeight,
+        windowWidth = window.innerWidth;
+      document.body.innerHTML = '<iframe scrolling="no" style="height:' + windowHeight + 'px; width:' + windowWidth + 'px" id="iframe" src ="http://10.42.108.197:3001"></iframe>';
+    });
+    window.addEventListener('resize', function () {
+
+      var iFrame = document.getElementById('iframe');
+
+
+      var computedStyle = getComputedStyle(iFrame);
+
+      var windowHeight = window.innerHeight,
+        windowWidth = window.innerWidth;
+
+
+      iFrame.style.height = windowHeight + 'px';
+      iFrame.style.width = windowWidth + 'px';
+    });
+  </script>
+  <style>
+    iframe {
+      padding: 0;
+      margin: 0;
+      border: none;
+      overflow: hidden;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+</body>
+
+</html>
